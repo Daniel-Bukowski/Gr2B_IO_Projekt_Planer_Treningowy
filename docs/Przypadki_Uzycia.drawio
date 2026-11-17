@@ -1,0 +1,120 @@
+<mxfile host="app.diagrams.net" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.212 Safari/537.36">
+  <diagram id="58cdce13-f638-feb5-8d6f-7d28b1aa9fa0" name="Strona-1">
+    <mxGraphModel dx="1692" dy="896" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" background="none" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <UserObject label="" plantUmlData="{&#xa;  &quot;data&quot;: &quot;@startuml\nleft to right direction\nskinparam packageStyle rectangle\n\nactor \&quot;Użytkownik\&quot; as User\nactor \&quot;System\&quot; as System\n\nrectangle \&quot;Planer Treningów (Aplikacja Desktopowa)\&quot; {\n  usecase \&quot;Zarządzanie własną bazą ćwiczeń\\n(dodawanie, edycja, usuwanie)\&quot; as UC1\n  usecase \&quot;Tworzenie i edycja planu treningowego\&quot; as UC2\n  usecase \&quot;Rejestracja wyników sesji treningowej\\n(wprowadzanie serii, powtórzeń i obciążeń)\&quot; as UC3\n  usecase \&quot;Przeglądanie historii treningów\\ni korekta zapisanych wyników\&quot; as UC4\n  usecase \&quot;Analiza postępów i statystyk\\n(wykresy, rekordy PR, objętość)\&quot; as UC5\n  usecase \&quot;Eksport i import danych\\n(kopia zapasowa JSON / CSV / SQLite)\&quot; as UC6\n  usecase \&quot;Cykliczny autozapis danych\\ni zarządzanie lokalną bazą\&quot; as UC7\n\n  UC2 ..&gt; UC1 : &lt;&lt;include&gt;&gt;\n  UC3 ..&gt; UC2 : &lt;&lt;include&gt;&gt;\n  UC3 ..&gt; UC7 : &lt;&lt;include&gt;&gt;\n  UC5 ..&gt; UC4 : &lt;&lt;extend&gt;&gt;\n}\n\nUser --&gt; UC1\nUser --&gt; UC2\nUser --&gt; UC3\nUser --&gt; UC4\nUser --&gt; UC5\nUser --&gt; UC6\n\nUC7 &lt;-- System\n@enduml&quot;,&#xa;  &quot;config&quot;: null&#xa;}" id="-Z2CYttwXyDoYZ_PMTJm-100">
+          <mxCell connectable="0" parent="1" style="group;transparentBounds=1;editIcon=1;lockedGroup=0;groupPadding=10 10 336 10;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1">
+            <mxGeometry as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Planer Treningów" plantUmlId="rect_0" plantUmlBaseStyle="swimlane;collapsible=0;startSize=26;fillColor=none;strokeColor=#181818;fontColor=#000000;fontSize=13;fontStyle=1;whiteSpace=wrap;" plantUmlBaseValue="Planer Treningów (Aplikacja Desktopowa)" id="-Z2CYttwXyDoYZ_PMTJm-101">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-100" style="swimlane;collapsible=0;startSize=26;fillColor=#eeeeee;strokeColor=#36393d;fontSize=13;fontStyle=1;whiteSpace=wrap;" vertex="1">
+            <mxGeometry height="710" width="1230" x="160" y="30" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Rejestracja wyników sesji treningowej&lt;br&gt;(wprowadzanie serii, powtórzeń i obciążeń)" plantUmlId="uc_1" plantUmlBaseStyle="ellipse;html=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontColor=#000000;fontSize=14;" plantUmlBaseValue="Rejestracja wyników sesji treningowej&lt;br&gt;(wprowadzanie serii, powtórzeń i obciążeń)" id="-Z2CYttwXyDoYZ_PMTJm-102">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-101" style="ellipse;html=1;fillColor=#eeeeee;strokeColor=#36393d;whiteSpace=wrap;fontSize=14;" vertex="1">
+            <mxGeometry height="75" width="353" x="20" y="46" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Eksport i import danych&lt;br&gt;(kopia zapasowa JSON / CSV / SQLite)" plantUmlId="uc_3" plantUmlBaseStyle="ellipse;html=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontColor=#000000;fontSize=14;" plantUmlBaseValue="Eksport i import danych&lt;br&gt;(kopia zapasowa JSON / CSV / SQLite)" id="-Z2CYttwXyDoYZ_PMTJm-104">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-101" style="ellipse;html=1;fillColor=#eeeeee;strokeColor=#36393d;whiteSpace=wrap;fontSize=14;" vertex="1">
+            <mxGeometry height="71" width="331" x="20" y="430" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Tworzenie i edycja planu treningowego" plantUmlId="uc_4" plantUmlBaseStyle="ellipse;html=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontColor=#000000;fontSize=14;" plantUmlBaseValue="Tworzenie i edycja planu treningowego" id="-Z2CYttwXyDoYZ_PMTJm-105">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-101" style="ellipse;html=1;fillColor=#eeeeee;strokeColor=#36393d;whiteSpace=wrap;fontSize=14;" vertex="1">
+            <mxGeometry height="63" width="292" x="840" y="52" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Przeglądanie historii treningów&lt;br&gt;i korekta zapisanych wyników" plantUmlId="uc_5" plantUmlBaseStyle="ellipse;html=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontColor=#000000;fontSize=14;" plantUmlBaseValue="Przeglądanie historii treningów&lt;br&gt;i korekta zapisanych wyników" id="-Z2CYttwXyDoYZ_PMTJm-106">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-101" style="ellipse;html=1;fillColor=#eeeeee;strokeColor=#36393d;whiteSpace=wrap;fontSize=14;" vertex="1">
+            <mxGeometry height="60" width="275" x="560" y="195" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Cykliczny autozapis danych&lt;br&gt;i zarządzanie lokalną bazą" plantUmlId="uc_6" plantUmlBaseStyle="ellipse;html=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontColor=#000000;fontSize=14;" plantUmlBaseValue="Cykliczny autozapis danych&lt;br&gt;i zarządzanie lokalną bazą" id="-Z2CYttwXyDoYZ_PMTJm-107">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-101" style="ellipse;html=1;fillColor=#eeeeee;strokeColor=#36393d;whiteSpace=wrap;fontSize=14;" vertex="1">
+            <mxGeometry height="56" width="258" x="442" y="560" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Zarządzanie własną bazą ćwiczeń&lt;br&gt;(dodawanie, edycja, usuwanie)" plantUmlId="uc_7" plantUmlBaseStyle="ellipse;html=1;fillColor=#F1F1F1;strokeColor=#181818;whiteSpace=wrap;fontColor=#000000;fontSize=14;" plantUmlBaseValue="Zarządzanie własną bazą ćwiczeń&lt;br&gt;(dodawanie, edycja, usuwanie)" id="-Z2CYttwXyDoYZ_PMTJm-108">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-101" style="ellipse;html=1;fillColor=#eeeeee;strokeColor=#36393d;whiteSpace=wrap;fontSize=14;" vertex="1">
+            <mxGeometry height="64" width="296" x="920" y="410" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_13" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#181818;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="-Z2CYttwXyDoYZ_PMTJm-114">
+          <mxCell edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-101" source="-Z2CYttwXyDoYZ_PMTJm-102" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#36393d;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fillColor=#eeeeee;" target="-Z2CYttwXyDoYZ_PMTJm-105">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_14" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#181818;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="-Z2CYttwXyDoYZ_PMTJm-115">
+          <mxCell edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-101" source="-Z2CYttwXyDoYZ_PMTJm-102" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#36393d;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fillColor=#eeeeee;" target="-Z2CYttwXyDoYZ_PMTJm-107">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="«include»" plantUmlId="rel_12" plantUmlBaseStyle="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#181818;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="«include»" id="-Z2CYttwXyDoYZ_PMTJm-113">
+          <mxCell edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-101" source="-Z2CYttwXyDoYZ_PMTJm-105" style="endArrow=open;dashed=1;dashPattern=5 5;strokeColor=#36393d;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;verticalAlign=bottom;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fillColor=#eeeeee;" target="-Z2CYttwXyDoYZ_PMTJm-108">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_8" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;" plantUmlBaseValue="" id="-Z2CYttwXyDoYZ_PMTJm-109">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-100" style="shape=umlActor;html=1;fillColor=#eeeeee;strokeColor=#36393d;fontSize=14;" vertex="1">
+            <mxGeometry height="60" width="40" x="30" y="165" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="Użytkownik" plantUmlId="actorlbl_9" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;" plantUmlBaseValue="Użytkownik" id="-Z2CYttwXyDoYZ_PMTJm-110">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-109" style="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontSize=14;part=1;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1">
+            <mxGeometry height="17" width="88" x="-24" y="62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="actor_10" plantUmlBaseStyle="shape=umlActor;html=1;fillColor=#F1F1F1;strokeColor=#181818;fontColor=#000000;fontSize=14;" plantUmlBaseValue="" id="-Z2CYttwXyDoYZ_PMTJm-111">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-100" style="shape=umlActor;html=1;fillColor=#eeeeee;strokeColor=#36393d;fontSize=14;" vertex="1">
+            <mxGeometry height="60" width="40" x="40" y="550" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="System" plantUmlId="actorlbl_11" plantUmlBaseStyle="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontColor=#000000;fontSize=14;part=1;" plantUmlBaseValue="System" id="-Z2CYttwXyDoYZ_PMTJm-112">
+          <mxCell parent="-Z2CYttwXyDoYZ_PMTJm-111" style="text;html=1;align=center;verticalAlign=middle;spacingBottom=1;fontSize=14;part=1;fillColor=#eeeeee;strokeColor=#36393d;" vertex="1">
+            <mxGeometry height="17" width="57" x="-8.5" y="62" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_16" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="-Z2CYttwXyDoYZ_PMTJm-117">
+          <mxCell edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-100" source="-Z2CYttwXyDoYZ_PMTJm-109" style="endArrow=block;endFill=1;strokeColor=#36393d;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fillColor=#eeeeee;" target="-Z2CYttwXyDoYZ_PMTJm-108">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_17" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="-Z2CYttwXyDoYZ_PMTJm-118">
+          <mxCell edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-100" source="-Z2CYttwXyDoYZ_PMTJm-109" style="endArrow=block;endFill=1;strokeColor=#36393d;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fillColor=#eeeeee;" target="-Z2CYttwXyDoYZ_PMTJm-105">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_18" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="-Z2CYttwXyDoYZ_PMTJm-119">
+          <mxCell edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-100" source="-Z2CYttwXyDoYZ_PMTJm-109" style="endArrow=block;endFill=1;strokeColor=#36393d;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fillColor=#eeeeee;" target="-Z2CYttwXyDoYZ_PMTJm-102">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_19" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="-Z2CYttwXyDoYZ_PMTJm-120">
+          <mxCell edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-100" source="-Z2CYttwXyDoYZ_PMTJm-109" style="endArrow=block;endFill=1;strokeColor=#36393d;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fillColor=#eeeeee;" target="-Z2CYttwXyDoYZ_PMTJm-106">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_21" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="-Z2CYttwXyDoYZ_PMTJm-122">
+          <mxCell edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-100" source="-Z2CYttwXyDoYZ_PMTJm-109" style="endArrow=block;endFill=1;strokeColor=#36393d;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;exitX=0.5;exitY=1.37;exitPerimeter=0;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fillColor=#eeeeee;" target="-Z2CYttwXyDoYZ_PMTJm-104">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <UserObject label="" plantUmlId="rel_22" plantUmlBaseStyle="endArrow=block;endFill=1;strokeColor=#181818;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;" plantUmlBaseValue="" id="-Z2CYttwXyDoYZ_PMTJm-123">
+          <mxCell edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-100" source="-Z2CYttwXyDoYZ_PMTJm-111" style="endArrow=block;endFill=1;strokeColor=#36393d;fontColor=#000000;fontSize=13;edgeStyle=none;rounded=0;html=1;curved=0;endSize=6;sourcePerimeterSpacing=0;targetPerimeterSpacing=0;fillColor=#eeeeee;" target="-Z2CYttwXyDoYZ_PMTJm-107">
+            <mxGeometry relative="1" as="geometry" />
+          </mxCell>
+        </UserObject>
+        <mxCell id="-Z2CYttwXyDoYZ_PMTJm-125" edge="1" parent="-Z2CYttwXyDoYZ_PMTJm-100" source="-Z2CYttwXyDoYZ_PMTJm-112" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;defaultLabelBackgroundColor=page;labelPadding=0 4;fillColor=#eeeeee;strokeColor=#36393d;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="74.26506024096398" y="640" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
